@@ -31,7 +31,7 @@ sonar {
   properties {
     property "sonar.projectKey", "TPctrl"
     property "sonar.projectName", "TPctrl"
-      property("sonar.host.url", "172.17.0.1:9000")
+    property("sonar.host.url", "172.17.0.1")
   }
 }
 
