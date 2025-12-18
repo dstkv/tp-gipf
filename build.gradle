@@ -31,9 +31,9 @@ test {
 
 jacocoTestReport {
     reports {
-        html.enabled true
-        xml.enabled true
-        xml.destination file("${buildDir}/reports/jacoco.xml")
+        xml.required = true
+        csv.required = false
+        html.outputLocation = layout.buildDirectory.dir('jacocoHtml')
     }
 }
 
@@ -41,7 +41,7 @@ sonar {
   properties {
     property "sonar.projectKey", "TPctrl"
     property "sonar.projectName", "TPctrl"
-    property "sonar.coverage.jacoco.xmlReportPath", "${buildDir}/reports/jacoco.xml"
+    property "sonar.coverage.jacoco.xmlReportPath", "${layout.buildDirectory.dir('jacocoHtml')}"
   }
 }
 
